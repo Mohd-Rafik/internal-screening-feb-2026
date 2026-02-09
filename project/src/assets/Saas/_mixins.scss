@@ -1,0 +1,39 @@
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin transition($time: 0.25s) {
+  transition: all $time ease-in-out;
+}
+
+
+@mixin input-focus($color) {
+  &:focus {
+    border-color: $color;
+    box-shadow: 0 0 0 0.2rem rgba($color, 0.2);
+    outline: none;
+  }
+}
+@mixin responsive($breakpoint) {
+
+  @if $breakpoint == lg {
+    @media (max-width: $bp-lg) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == md {
+    @media (max-width: $bp-md) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == sm {
+    @media (max-width: $bp-sm) {
+      @content;
+    }
+  }
+}

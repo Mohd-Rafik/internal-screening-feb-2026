@@ -1,0 +1,30 @@
+@import'../../../node_modules/bootstrap/scss/functions';
+@import "../Saas/variables";
+@import "mixins";
+@import "signin";
+@import "signup";
+@import "sidebar";
+@import "topbar";
+@import "dashbord";
+@import'../../../node_modules/bootstrap/scss/bootstrap.scss';
+@import'../../../node_modules/bootstrap/scss/variables';
+
+body
+{
+  font-family: 
+  "Poppins", sans-serif;
+}
+.dashboard-layout {
+  display: flex;
+}
+.main-wrapper {
+  background: #f5f7fb;
+  min-height: 100vh;
+}
+
+.page-content {
+  padding: 20px;
+}
+
+
+
