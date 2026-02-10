@@ -1,8 +1,9 @@
 import React, { createContext, useContext, useState } from "react";
+
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-  
+
   const [user, setUser] = useState(
     JSON.parse(localStorage.getItem("currentUser")) || null
   );
@@ -30,13 +31,17 @@ export const AuthProvider = ({ children }) => {
         message: "Invalid email or password",
       };
     }
-       return (
+  };
+
+  // ✅ Provider yaha hoga (login ke bahar)
+  return (
     <AuthContext.Provider value={{ user, login }}>
       {children}
     </AuthContext.Provider>
   );
-  };
- 
+};
+
 /* ---------------- Custom Hook ---------------- */
+
 export const useAuth = () =>
   useContext(AuthContext);
