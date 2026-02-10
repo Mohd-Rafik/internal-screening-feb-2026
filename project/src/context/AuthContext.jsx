@@ -30,6 +30,11 @@ export const AuthProvider = ({ children }) => {
         message: "Invalid email or password",
       };
     }
+       return (
+    <AuthContext.Provider value={{ user, login }}>
+      {children}
+    </AuthContext.Provider>
+  );
   };
  
 /* ---------------- Custom Hook ---------------- */
