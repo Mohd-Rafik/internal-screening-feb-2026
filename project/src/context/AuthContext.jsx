@@ -32,8 +32,6 @@ export const AuthProvider = ({ children }) => {
       };
     }
   };
-
-  // ✅ Provider yaha hoga (login ke bahar)
   return (
     <AuthContext.Provider value={{ user, login }}>
       {children}
