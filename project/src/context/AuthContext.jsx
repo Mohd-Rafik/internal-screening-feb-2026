@@ -31,22 +31,7 @@ export const AuthProvider = ({ children }) => {
       };
     }
   };
-
-  /* ---------------- LOGOUT ---------------- */
-  const logout = () => {
-    localStorage.removeItem("currentUser");
-    setUser(null);
-  };
-
-  return (
-    <AuthContext.Provider
-      value={{ user, login, logout }}
-    >
-      {children}
-    </AuthContext.Provider>
-  );
-};
-
+ 
 /* ---------------- Custom Hook ---------------- */
 export const useAuth = () =>
   useContext(AuthContext);
